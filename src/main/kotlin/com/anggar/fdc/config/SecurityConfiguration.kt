@@ -23,7 +23,7 @@ class SecurityConfiguration : WebSecurityConfigurerAdapter() {
     override fun configure(http: HttpSecurity) {
         http
                 .csrf().disable()
-                .authorizeRequests().anyRequest().authenticated()
+                .authorizeRequests().anyRequest().anonymous()
                 .and().httpBasic()
                 .and().sessionManagement().disable()
     }
